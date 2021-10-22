@@ -1,0 +1,137 @@
+* {
+    margin    : 0px;
+    padding   : 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family     : 'Rampart One', cursive;
+    background-color: #1E12Ad;
+    overflow        : hidden;
+}
+
+.main {
+    color     : black;
+    margin    : 0px auto;
+    overflow  : hidden;
+    text-align: center;
+    z-index   : 1000;
+}
+
+.foto {
+    width              : 8rem;
+    height             : 8rem;
+    border-radius      : 50%;
+    background-image   : url(IMG_20210903_204810708.jpg);
+    background-position: center;
+    background-size    : 140px;
+    margin             : 15px auto;
+    box-shadow         : 5px 5px 0px 5px #143FDA;
+}
+
+
+.main h1 {
+    font-family   : 'Courier New', Courier, monospace;
+    color         : white;
+    text-align    : center;
+    font-size     : 16px;
+    padding       : 10px;
+    letter-spacing: 4px;
+}
+
+.main span {
+    display    : block;
+    font-family: 'Courier New', Courier, monospace;
+    color      : #FDF9F9;
+    text-align : center;
+    font-size  : 13px;
+    opacity    : 50%;
+}
+
+
+.main ul {
+    margin    : 100px auto;
+    list-style: none;
+    min-width : 300px;
+    max-width : 400px;
+    padding   : 10px;
+}
+
+.main ul li {
+    text-align        : center;
+    margin            : 10px;
+    padding           : 10px;
+    border-radius     : 7px;
+    background-image  : linear-gradient(to top, white, orange);
+    /*background-color: white;*/
+}
+
+ul li a {
+    text-decoration: none;
+    color          : black;
+}
+
+Ul li:hover {
+    background-image: linear-gradient(to bottom, white, rgb(247, 167, 18));
+    transition      : ease-in-out 1s;
+    font-size       : 26px;
+}
+
+ul li a:hover {
+    text-align: center;
+    color     : black;
+}
+
+
+.main::after {
+    content                  : '';
+    position                 : absolute;
+    width                    : 100%;
+    height                   : 90%;
+    top                      : 250px;
+    background-color         : #F26D0C;
+    opacity                  : 15%;
+    display                  : flex;
+    margin                   : 0px auto;
+    border-top-left-radius   : 50%;
+    border-top-right-radius  : 50%;
+    z-index                  : -1000;
+    animation-name           : onda;
+    animation-duration       : 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+
+@keyframes onda {
+
+    0% {
+        box-shadow: -40px 15px 5px 30px black;
+        transform: rotate(-10deg);
+    }
+
+    25% {
+        box-shadow: -25px -15px 5px 30px black;
+        border-top-left-radius : 65%;
+        border-top-right-radius: 65%;
+        transform : rotate(0deg);
+    }
+
+    50% {
+        box-shadow: +35px -25px 5px 30px black;
+        border-top-left-radius : 50%;
+        border-top-right-radius: 50%;
+        transform              : rotate(+10deg);
+    }
+
+    100% {
+        border-top-left-radius : 50%;
+        border-top-right-radius: 50%;
+        box-shadow: 40px 15px 5px 30px black;
+        transform : rotate(+10deg);
+    }
+
+}
